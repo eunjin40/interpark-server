@@ -190,6 +190,12 @@ app.get("/recommend", (req, res) => {
   res.send(result);
 });
 
+// tour 영역에 출력할 자료 요청
+app.get("/tour", (req, res) => {
+  const result = {};
+  res.send(result);
+});
+
 // 서버에서 Request 요청대기
 app.listen(port, () => {
   console.log(`현재 웹서버가 ${port} 로 접속하였습니다.`);
