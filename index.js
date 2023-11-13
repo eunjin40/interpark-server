@@ -270,6 +270,419 @@ app.get("/tour", (req, res) => {
   res.send(result);
 });
 
+// ticket 영역에 출력할 자료 요청
+app.get("/ticket", (req, res) => {
+  const result = {
+    total: 8,
+    ticket_1: {
+      image: "images/ti1.gif",
+      rank: 1,
+      name: "뮤지컬 <몬테크리스토>",
+      place: "충무아트센터 대극장",
+      date: "2023.11.21 - 2024.02.25",
+      class: "ticket-good-badge-blue",
+      badge: "좌석우위",
+      url: "c.html"
+    },
+    ticket_2: {
+      image: "images/ti2.gif",
+      rank: 2,
+      name: "태양의서커스 <루치아>",
+      place: "잠실종합운동장 내 빅탑",
+      date: "2023.10.25 - 2023.12.31",
+      class: "ticket-good-badge-blue",
+      badge: "좌석우위",
+      url: "c.html"
+    },
+    ticket_3: {
+      image: "images/ti3.gif",
+      rank: 3,
+      name: "뮤지컬 <스토리오브마이라이프>",
+      place: "두산아트센터 연강홀",
+      date: "2023.11.30 - 2024.02.18",
+      class: "ticket-good-badge-blue",
+      badge: "좌석우위",
+      url: "c.html"
+    },
+    ticket_4: {
+      image: "images/ti4.gif",
+      rank: 4,
+      name: "뮤지컬 <렌트>",
+      place: "coex 신한카드 artium",
+      date: "2023.11.11 - 2024.02.25",
+      class: "ticket-good-badge-red",
+      badge: "단독판매",
+      url: "c.html"
+    },
+    ticket_5: {
+      image: "images/ti5.gif",
+      rank: 5,
+      name: "태양의서커스 <루치아> - 부산",
+      place: "신세계 센텀시티 내 빅탑",
+      date: "2024.01.13 - 2024.02.04",
+      class: "ticket-good-badge-blue",
+      badge: "좌석우위",
+      url: "c.html"
+    },
+    ticket_6: {
+      image: "images/ti6.gif",
+      rank: 6,
+      name: "뮤지컬 <레베카> 10주년 기념공연",
+      place: "블루스퀘어 신한카드홀",
+      date: "2023.08.19 - 2023.11.19",
+      class: "ticket-good-badge-blue",
+      badge: "좌석우위",
+      url: "c.html"
+    },
+    ticket_7: {
+      image: "images/ti7.gif",
+      rank: 7,
+      name: "뮤지컬 <레미제라블>",
+      place: "블루스퀘어 신한카드홀",
+      date: "2023.11.30 - 2024.03.10",
+      class: "ticket-good-badge-red",
+      badge: "단독판매",
+      url: "c.html"
+    },
+    ticket_8: {
+      url: "go,html"
+    }
+  };
+  res.send(result);
+});
+
+// live 영역에 출력할 자료 요청
+app.get("/live", (req, res) => {
+  const result = {
+    total: 8,
+    live_1: {
+      live_info: {
+        image: "images/live1.jpg",
+        state: "방송예정",
+        title: "[에듀트립] 글로벌 캠프 첫방 기념 최초 할인! 채팅 참여만 해도 경품 추첨",
+        url: "d.html"
+      },
+  
+      live_day: {
+        date: "11월 08일 (수)",
+        time: "11:00"
+      },
+  
+      live_good: {
+        good_image: "images/live_sub1.png",
+        good_title: "새로운 여행, 컨셉 트립 기획전",
+        good_discount: 0,
+        good_price: 0,
+        good_url: "good.html"
+      }
+    },
+    live_2: {
+      live_info: {
+        image: "images/live2.png",
+        state: "방송예정",
+        title: "제주 자연 속에서 즐기는 온전한 쉼 ✨ 파르나스 호텔 제주",
+        url: "d.html"
+      },
+  
+      live_day: {
+        date: "11월 23일 (목)",
+        time: "19:00"
+      },
+  
+      live_good: {
+        good_image: "",
+        good_title: "",
+        good_discount: 0,
+        good_price: 0,
+        good_url: ""
+      }
+    },
+    live_3: {
+      live_info: {
+        image: "images/live3.png",
+        state: "VOD",
+        title: "네스트호텔 최대 73% 라이브특가",
+        url: "d.html"
+      },
+  
+      live_day: {
+        date: "",
+        time: ""
+      },
+  
+      live_good: {
+        good_image: "images/live_sub3.jpg",
+        good_title: "네스트호텔 라이브특가 구매하러 가기!",
+        good_discount: 73,
+        good_price: 125100,
+        good_url: "good.html"
+      }
+    },
+    live_4: {
+      live_info: {
+        image: "images/live4.jpg",
+        state: "VOD",
+        title: "[나트랑] 스완도르 올인클루시브 5일 70만원대~",
+        url: "d.html"
+      },
+  
+      live_day: {
+        date: "",
+        time: ""
+      },
+  
+      live_good: {
+        good_image: "images/live_sub4.png",
+        good_title: "[카쇼라X스완도르 리조트] 올인클루시브 나트랑 3박 5일",
+        good_discount: 0,
+        good_price: 749000,
+        good_url: "good.html"
+      }
+    },
+    live_5: {
+      live_info: {
+        image: "images/live5.jpg",
+        state: "VOD",
+        title: "전라도 특집 여수/전주/광주",
+        url: "d.html"
+      },
+  
+      live_day: {
+        date: "",
+        time: ""
+      },
+  
+      live_good: {
+        good_image: "images/live_sub5.jpg",
+        good_title: "히든베이 호텔",
+        good_discount: 81,
+        good_price: 84950,
+        good_url: "good.html"
+      }
+    },
+    live_6: {
+      live_info: {
+        image: "images/live6.jpg",
+        state: "VOD",
+        title: "진에어 동계 잔여석 & 3월 출발 단독 특가! 방송 중에만 제휴카드로 결제시 15% 추가 할인 🎁",
+        url: "d.html"
+      },
+  
+      live_day: {
+        date: "",
+        time: ""
+      },
+  
+      live_good: {
+        good_image: "images/live_sub6.jpg",
+        good_title: "[실시간 항공권] 인천 ↔ 오사카",
+        good_discount: 0,
+        good_price: 217900,
+        good_url: "good.html"
+      }
+    },
+    live_7: {
+      live_info: {
+        image: "images/live7.jpg",
+        state: "VOD",
+        title: "용평리조트 최대 85% 라이브 특가! 7만원대~",
+        url: "d.html"
+      },
+  
+      live_day: {
+        date: "",
+        time: ""
+      },
+  
+      live_good: {
+        good_image: "images/live_sub7.jpg",
+        good_title: "용평리조트",
+        good_discount: 80,
+        good_price: 72000,
+        good_url: "good.html"
+      }
+    },
+    live_8: {
+      live_info: {
+        image: "images/live8.jpg",
+        state: "VOD",
+        title: "[이달의 여행] 코타키나발루 특가를 다 모았다!",
+        url: "d.html"
+      },
+  
+      live_day: {
+        date: "",
+        time: ""
+      },
+  
+      live_good: {
+        good_image: "images/live_sub8.png",
+        good_title: "[이달의 여행] 코타키나발루 특가모음🎉",
+        good_discount: 0,
+        good_price: 0,
+        good_url: "good.html"
+      }
+    }
+  };
+  res.send(result);
+});
+
+// books 영역에 출력할 자료 요청
+app.get("/books", (req, res) => {
+  const result = {
+    total: 10,
+    books_1: {
+      image: "images/book1.jpg",
+      name: "블루 아카이브 2주년 기념 Ost [Kit 앨범",
+      price: 32000,
+      url: "e.html"
+    },
+    books_2: {
+      image: "images/book2.jpg",
+      name: "더 그레이트 비트코인",
+      price: 31500,
+      url: "e.html"
+    },
+    books_3: {
+      image: "images/book3.jpg",
+      name: "기적의 자세요정",
+      price: 19800,
+      url: "e.html"
+    },
+    books_4: {
+      image: "images/book4.jpg",
+      name: "역사는 반복된다",
+      price: 15750,
+      url: "e.html"
+    },
+    books_5: {
+      image: "images/book5.jpg",
+      name: "최애의 아이 12",
+      price: 5400,
+      url: "e.html"
+    },
+    books_6: {
+      image: "images/book6.jpg",
+      name: "세이노의 가르침",
+      price: 6480,
+      url: "e.html"
+    },
+    books_7: {
+      image: "images/book7.jpg",
+      name: "[2024년 달력 얼리버드] 어린왕자, 앤, 곰돌이푸, 애드워드호퍼, 모네, 고흐, 윤동주 등",
+      price: 6560,
+      url: "e.html"
+    },
+    books_8: {
+      image: "images/book8.jpg",
+      name: "코스모폴리탄 11월호 - 표지 3종 C형 수지 / 부록없음",
+      price: 6300,
+      url: "e.html"
+    },
+    books_9: {
+      image: "images/book9.jpg",
+      name: "연인 대본집 1",
+      price: 20700,
+      url: "e.html"
+    },
+    books_10: {
+      image: "images/book10.jpg",
+      name: "최태성의 365 한국사 일력",
+      price: 19800,
+      url: "e.html"
+    }
+  };
+  res.send(result);
+});
+
+// events 영역에 출력할 자료 요청
+app.get("/events", (req, res) => {
+  const result = {
+    total: 20,
+  events_1: {
+    file: "images/ev1.jpg",
+    url: "f.html"
+  },
+  events_2: {
+    file: "images/ev2.jpg",
+    url: "f.html"
+  },
+  events_3: {
+    file: "images/ev3.jpg",
+    url: "f.html"
+  },
+  events_4: {
+    file: "images/ev4.jpg",
+    url: "f.html"
+  },
+  events_5: {
+    file: "images/ev5.jpg",
+    url: "f.html"
+  },
+  events_6: {
+    file: "images/ev6.jpg",
+    url: "f.html"
+  },
+  events_7: {
+    file: "images/ev7.jpg",
+    url: "f.html"
+  },
+  events_8: {
+    file: "images/ev8.jpg",
+    url: "f.html"
+  },
+  events_9: {
+    file: "images/ev9.png",
+    url: "f.html"
+  },
+  events_10: {
+    file: "images/ev10.jpg",
+    url: "f.html"
+  },
+  events_11: {
+    file: "images/ev11.png",
+    url: "f.html"
+  },
+  events_12: {
+    file: "images/ev12.png",
+    url: "f.html"
+  },
+  events_13: {
+    file: "images/ev13.jpg",
+    url: "f.html"
+  },
+  events_14: {
+    file: "images/ev14.jpg",
+    url: "f.html"
+  },
+  events_15: {
+    file: "images/ev15.jpg",
+    url: "f.html"
+  },
+  events_16: {
+    file: "images/ev16.jpg",
+    url: "f.html"
+  },
+  events_17: {
+    file: "images/ev17.jpg",
+    url: "f.html"
+  },
+  events_18: {
+    file: "images/ev18.jpg",
+    url: "f.html"
+  },
+  events_19: {
+    file: "images/ev19.jpg",
+    url: "f.html"
+  },
+  events_20: {
+    file: "images/ev20.jpg",
+    url: "f.html"
+  }
+  };
+  res.send(result);
+});
+
 // 서버에서 Request 요청대기
 app.listen(port, () => {
   console.log(`현재 웹서버가 ${port} 로 접속하였습니다.`);
